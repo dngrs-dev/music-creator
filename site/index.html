@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Creator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Create your own music!</h1>
+    </header>
+    <main>
+      <div class="main-flex">
+        <section id="song-creation">
+          <h2>Create a song</h2>
+          <form id="song-form">
+            <label
+              ><input type="checkbox" id="same-for-all" checked /> Use same
+              settings for all sections</label
+            >
+            <div id="sections-container"></div>
+            <button type="button" id="add-section-btn" style="display: none">
+              Add Section
+            </button>
+            <br /><br />
+            <button type="submit">Create Song</button>
+          </form>
+        </section>
+        <div
+          class="right-panel"
+          style="display: flex; flex-direction: column; gap: 1.5em; width: 100%"
+        >
+          <div id="structure-editor">
+            <h3>Song Structure</h3>
+            <div id="structure-list"></div>
+            <button type="button" id="add-to-structure-btn">
+              Add Section to Structure
+            </button>
+          </div>
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              gap: 1.5em;
+              width: 100%;
+              align-items: flex-start;
+            "
+          >
+            <section id="song-details" style="flex: 1 1 0">
+              <h2>Song Details</h2>
+              <div id="song-info"></div>
+            </section>
+            <div id="config-preview-container" style="flex: 1 1 0; margin: 0">
+              <h2
+                id="config-preview-toggle"
+                style="cursor: pointer; user-select: none"
+              >
+                Config Preview &#9660;
+              </h2>
+              <div id="config-preview-wrapper">
+                <pre id="config-preview"></pre>
+              </div>
+              <button type="button" id="download-config-btn">
+                Download Config JSON
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 Music Creator</p>
+    </footer>
+  </body>
+</html>
